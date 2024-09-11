@@ -1,0 +1,21 @@
+# * EXCEPTION:
+# * ERROR - :reverse_trayector method missing on ~TimeAnimation~.
+# The method named
+# :reverse_trayector
+# doesn't exist on
+# [TimeAnimation, #<Class:#<TimeAnimation:0x7fbc9c0ccd30>>, TimeAnimation].
+# #+begin_src ~TimeAnimation#inspect~
+# #<TimeAnimation:0x7fbc9c0ccd30>
+# #+end_src ~TimeAnimation#inspect~ for :reverse_trayector method missing on ~TimeAnimation~
+# ** Backtrace:
+# *** app/main.rb:153:in bounce_movement
+# *** app/main.rb:176:in bounce
+# *** app/main.rb:174:in bounce
+# *** app/main.rb:145:in bounce_animation
+# *** app/main.rb:124:in current_screen
+# *** app/main.rb:195:in tick
+# *** app/main.rb:204:in tick
+# *** app/main.rb:202
+
+Game State:
+{:state=>{:entity_id=>1, :tick_count=>99, :__thrash_count__=>{}, :time_animation=>#<TimeAnimation:0x7fbc9c0ccd30>}, :temp_state=>{}, :inputs=>{:controller_one=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_two=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_three=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :controller_four=>{:key_down=>{}, :key_held=>{}, :key_up=>{}}, :keyboard=>{:key_up=>{:truthy_keys=>[]}, :key_held=>{:truthy_keys=>[]}, :key_down=>{:truthy_keys=>[]}, :has_focus=>true}, :mouse=>{:x=>1205.0, :y=>232.0, :moved=>nil, :moved_at=>66, :has_focus=>true}, :text=>[]}, :passes=>[], :outputs=>{:solids=>[], :sprites=>[], :lines=>[], :labels=>[{:x=>937.0, :y=>657.0, :size_enum=>20, :text=>"23 : 10"}], :sounds=>[], :borders=>[{:x=>937.0, :y=>597.0, :w=>210, :h=>60}], :primitives=>[], :static_solids=>[], :static_borders=>[], :static_sprites=>[], :static_lines=>[], :static_labels=>[], :static_primitives=>[]}, :grid=>{:device_top=>720, :device_bottom=>0.0, :origin_x=>0.0, :device_left=>0.0, :ffi_draw=>"", :device_right=>1280, :native_height=>720, :allscreen_offset_x=>0, :origin_y=>720, :native_width=>1280, :left=>0.0, :allscreen_height=>720, :right=>1280, :device_height=>720, :top=>720, :allscreen_offset_y=>0, :runtime=>{:argv=>"/Users/santiago/Desktop/libro_object_oriented_juegos/tercer projecto/dragonruby-macos/dragonruby", :platform=>"Mac OS X", :required_files=>[], :reload_list_history=>{"app/main.rb"=>{:current=>{:path=>"app/main.rb", :global_at=>601, :event=>:reload_completed}, :history=>[{:path=>"app/main.rb", :global_at=>-1, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>-1, :event=>:processing}, {:path=>"app/main.rb", :global_at=>-1, :event=>:reload_completed}, {:path=>"app/main.rb", :global_at=>599, :event=>:reload_queued}, {:path=>"app/main.rb", :global_at=>600, :event=>:processing}, {:path=>"app/main.rb", :global_at=>601, :event=>:reload_completed}]}}}, :device_width=>1280, :bottom=>0.0, :allscreen_bottom=>0, :left_margin=>0.0, :name=>:bottom_left, :allscreen_width=>1280, :allscreen_right=>1280, :bottom_margin=>0.0, :allscreen_top=>720, :center_x=>640.0, :rect=>[0.0, 0.0, 1280, 720], :native_scale_enum=>100, :allscreen_left=>0, :native_scale=>1.0, :center_y=>360.0, :center=>[640.0, 360.0]}}

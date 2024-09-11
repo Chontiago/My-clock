@@ -1,0 +1,23 @@
+class Clock
+  attr_accessor :x_pos, :y_pos, :horizontal_speed, :vertical_speed, :width, :height, :size
+
+  def initialize(x, y, time)
+    @x_pos = x
+    @y_pos = y
+    @time = time
+    @size = 20
+    @width = (@time.length * 10) + (@time.length * @size) # Can still be improved to scale better
+    @height = 20 + (@size * 2)
+    @vertical_speed = 3
+    @horizontal_speed = 3
+  end
+
+  def current_time
+    return  {x: @x_pos, y: @y_pos, size_enum: @size, text: @time}
+  end
+
+  
+  def clock_hitbox # used for animations such as bounce
+    return  {x: @x_pos , y: @y_pos - @height , w: @width, h: @height} #cambiar a ligarlo con el width del texto 
+  end
+end
