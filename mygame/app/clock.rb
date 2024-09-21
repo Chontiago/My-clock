@@ -3,6 +3,8 @@ class Clock
   def initialize(x, y, time)
     @x_pos = x
     @y_pos = y
+    @reset_x = x
+    @reset_y = y
     @time = time
     @size = 20
     @width = (@time.length * 10) + (@time.length * @size) # Can still be improved to scale better
@@ -15,11 +17,15 @@ class Clock
   def current_time
     return  {x: @x_pos, y: @y_pos, size_enum: @size, text: @time, r: @color[0], g: @color[1], b: @color[2]}
   end
-
- 
-
   
   def clock_hitbox # used for animations such as bounce
     return  {x: @x_pos , y: @y_pos - @height , w: @width, h: @height} #cambiar a ligarlo con el width del texto 
+  end
+
+  def reset_defaults 
+    @size = 20
+    @x_pos = @reset_x
+    @y_pos = @reset_y
+    
   end
 end

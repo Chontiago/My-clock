@@ -1,4 +1,5 @@
 class Expand
+  attr_accessor :animated_object
   def initialize(animated_object)
     @animated_object = animated_object
   end

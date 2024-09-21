@@ -1,7 +1,8 @@
 
 class Bounce
-    def initialize(bouncing_object, borders, main)
-      @bouncing_object = bouncing_object
+  attr_accessor :animated_object
+    def initialize(object, borders, main)
+      @animated_object = object
       @borders = borders
       @main = main
       
@@ -13,8 +14,8 @@ class Bounce
     end
 
     def initial_movement
-      @bouncing_object.x_pos += @bouncing_object.horizontal_speed
-      @bouncing_object.y_pos += @bouncing_object.vertical_speed 
+      @animated_object.x_pos += @animated_object.horizontal_speed
+      @animated_object.y_pos += @animated_object.vertical_speed 
     end
 
     def bounce_trayectory(border, object)
@@ -30,8 +31,8 @@ class Bounce
 
     def bounce
       @borders.each do |border|
-        if @main.collision(border, @bouncing_object)
-          bounce_trayectory(border, @bouncing_object)
+        if @main.collision(border, @animated_object)
+          bounce_trayectory(border, @animated_object)
         end
       end
     end

@@ -45,7 +45,7 @@ class ColorChange
   def change_color(element) #Helper function, that makes the animation, takes an array and in a loop sequentially randomizes colors from each element from left to right, and then makes them black again from right to left 
     element.color.each_with_index do |time, index|
       if !@invert_animation
-        element.color[index] = rand(255)
+        element.color[index] = rand(ALL_COLORS)
       else 
         element.color[index] = 0
       end
